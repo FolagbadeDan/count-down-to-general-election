@@ -34,8 +34,21 @@ function countDown(){
 
 countDown()
 
- setInterval(countDown, 1000)
+setInterval(countDown, 1000)
 // var d = Math.floor(seconds / (3600*24));
 // var h = Math.floor(seconds % (3600*24) / 3600);
 // var m = Math.floor(seconds % 3600 / 60);
 // var s = Math.floor(seconds % 60);
+
+const api_url = 'nigerian-politics-news.p.rapidapi.com';
+  async function getUser() {
+ 
+    // Making an API call (request)
+    // and getting the response back
+    const response = await fetch(api_url);
+ 
+    // Parsing it to JSON format
+    const data = await response.json();
+    console.log(data)}
+
+    getUser()
